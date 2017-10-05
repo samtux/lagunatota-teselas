@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Capabilities version="1.0.0" xmlns="http://www.opengis.net/wmts/1.0" xmlns:ows="http://www.opengis.net/ows/1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/wmts/1.0 http://schemas.opengis.net/wmts/1.0/wmtsGetCapabilities_response.xsd">
+  <ServiceMetadataURL xlink:href="https://samtux.github.io/lagunatota-teselas/wmts/1.0.0/WMTSCapabilities.xml"/>
+  <ows:ServiceIdentification>
+    <ows:ServiceType>OGC WMTS</ows:ServiceType>
+    <ows:ServiceTypeVersion>1.0.0</ows:ServiceTypeVersion>
+    <ows:Title>Servicio WMTS de Laguna de Tota (Colombia)</ows:Title>
+    <ows:Abstract xml:lang="en">Servicio WMTS de Laguna de Tota (Colombia)</ows:Abstract>
+    <ows:Keywords>
+      <ows:Keyword>colombia</ows:Keyword>
+      <ows:Keyword>boyaca</ows:Keyword>
+      <ows:Keyword>wmts</ows:Keyword>
+    </ows:Keywords>
+    <ows:Fees>Ninguna</ows:Fees>
+    <ows:AccessConstraints>No se permite la descarga masiva</ows:AccessConstraints>
+  </ows:ServiceIdentification>
+  <ows:ServiceProvider>
+    <ows:ProviderName>Samuel Mesa</ows:ProviderName>
+    <ows:ProviderSite xlink:href="https://samtux.github.io/lagunatota-teselas/"/>
+  </ows:ServiceProvider>
+  <Contents>
+    <Layer>
+      <ows:Identifier>tota</ows:Identifier>
+      <ows:Title>Mapa base de Laguna de Tota</ows:Title>
+      <ows:Abstract>Mapa base de Laguna de Tota</ows:Abstract>
+      <ows:BoundingBox crs="urn:ogc:def:crs:EPSG:6.18.3:3857">
+        <ows:LowerCorner>-8135284.04692 601792.412642</ows:LowerCorner>
+        <ows:UpperCorner>-8096259.88623 631043.012903</ows:UpperCorner>
+      </ows:BoundingBox>
+      <ows:WGS84BoundingBox crs="urn:ogc:def:crs:OGC:2:84">
+        <ows:LowerCorner>-73.0805 5.39799</ows:LowerCorner>
+        <ows:UpperCorner>-72.72994 5.65953</ows:UpperCorner>
+      </ows:WGS84BoundingBox>
+      <Style isDefault="true">
+        <ows:Identifier>default</ows:Identifier>
+      </Style>
+      <Format>image/png</Format>
+      <TileMatrixSetLink>
+        <TileMatrixSet>z13to16</TileMatrixSet>
+      </TileMatrixSetLink>
+      <ResourceURL format="image/png" resourceType="tile" template="https://samtux.github.io/lagunatota-teselas/tota/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+    </Layer>
+    <TileMatrixSet>
+      <ows:Identifier>z13to16</ows:Identifier>
+      <ows:SupportedCRS>urn:ogc:def:crs:EPSG:6.18.3:3857</ows:SupportedCRS>
+      <TileMatrix>
+        <ows:Identifier>13</ows:Identifier>
+        <ScaleDenominator>68247.346683193085</ScaleDenominator>
+        <TopLeftCorner>-20037508.34278924 20037508.34278924</TopLeftCorner>
+        <TileWidth>256</TileWidth>
+        <TileHeight>256</TileHeight>
+        <MatrixWidth>8192</MatrixWidth>
+        <MatrixHeight>8192</MatrixHeight>
+      </TileMatrix>
+      <TileMatrix>
+        <ows:Identifier>14</ows:Identifier>
+        <ScaleDenominator>34123.673341596543</ScaleDenominator>
+        <TopLeftCorner>-20037508.34278924 20037508.34278924</TopLeftCorner>
+        <TileWidth>256</TileWidth>
+        <TileHeight>256</TileHeight>
+        <MatrixWidth>16384</MatrixWidth>
+        <MatrixHeight>16384</MatrixHeight>
+      </TileMatrix>
+      <TileMatrix>
+        <ows:Identifier>15</ows:Identifier>
+        <ScaleDenominator>17061.836670798271</ScaleDenominator>
+        <TopLeftCorner>-20037508.34278924 20037508.34278924</TopLeftCorner>
+        <TileWidth>256</TileWidth>
+        <TileHeight>256</TileHeight>
+        <MatrixWidth>32768</MatrixWidth>
+        <MatrixHeight>32768</MatrixHeight>
+      </TileMatrix>
+      <TileMatrix>
+        <ows:Identifier>16</ows:Identifier>
+        <ScaleDenominator>8530.918335399136</ScaleDenominator>
+        <TopLeftCorner>-20037508.34278924 20037508.34278924</TopLeftCorner>
+        <TileWidth>256</TileWidth>
+        <TileHeight>256</TileHeight>
+        <MatrixWidth>65536</MatrixWidth>
+        <MatrixHeight>65536</MatrixHeight>
+      </TileMatrix>
+    </TileMatrixSet>
+  </Contents>
+</Capabilities>
+
